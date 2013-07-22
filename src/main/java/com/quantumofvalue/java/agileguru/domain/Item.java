@@ -22,6 +22,14 @@ public class Item implements Serializable {
 	private Long id;
 	private String itemText;
 	
+	public Item() {
+		
+	}
+	
+	public Item(String itemText) {
+		this.itemText = itemText;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID")

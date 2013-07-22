@@ -37,17 +37,11 @@ public class ItemServiceImplTest extends AbstractServiceImplTest {
 	public void testAddingItemsCollection()
 			throws Exception {
 		
-		Item item1 = new Item();
-		item1.setItemText("Item 1");
+		List<Item> items = Arrays.asList(new Item("Item 1"), new Item("Item 2"));
 		
-		Item item2 = new Item();
-		item2.setItemText("Item 2");
-		
-		itemService.save(Arrays.asList(item1, item2));
+		itemService.save(items);
 		em.flush();
-		
-		List<Item> result = itemService.findAll();
 
-		Assert.assertArrayEquals(new Item[] {item1,item2}, result.toArray());
+		Assert.assertArrayEquals(items.toArray(), itemService.findAll().toArray());
 	}				
 }
