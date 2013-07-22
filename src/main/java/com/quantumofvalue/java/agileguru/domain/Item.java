@@ -47,6 +47,11 @@ public class Item implements Serializable {
 	
 	public String toString() {		
 		return "Item - Id: " + id + ", Item text: " + itemText ;
-	}	
+	}
+	
+	@Override
+	public boolean equals(Object item) {
+		return (id == ((Item)item).getId() && itemText == ((Item)item).getItemText());
+	}
 	
 }
