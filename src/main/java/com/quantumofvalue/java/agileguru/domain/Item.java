@@ -59,7 +59,7 @@ public class Item implements Serializable {
 	
 	@Override
 	public boolean equals(Object item) {
-		return (id == ((Item)item).getId() && itemText == ((Item)item).getItemText());
+		return (id == ((Item)item).getId() && itemText.equals(((Item)item).getItemText()));
 	}
 	
 }
