@@ -213,6 +213,13 @@
 			<version>3.2-FINAL</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.33.0</version>
+			<scope>test</scope>
+		</dependency>
             
 		
 		<!-- Cucumber Dependencies -->
