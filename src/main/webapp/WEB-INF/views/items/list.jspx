@@ -11,24 +11,4 @@
 	</head>
 	<h1>Items</h1>
 	
-	<c:if test="${not empty items}">
-		<table>
-			<thead>
-				<tr>
-					<th>Item ID</th>
-					<th>Item Text</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${items}" var="item">
-					<tr>
-						<td>${item.id}</td>
-						<td>${item.itemText}</td>
-					</tr>
-				</c:forEach>
-			
-			</tbody>
-		</table>
-	</c:if>
-	
 </div>
