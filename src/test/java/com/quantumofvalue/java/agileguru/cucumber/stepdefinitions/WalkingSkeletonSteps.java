@@ -41,7 +41,7 @@ public class WalkingSkeletonSteps {
 		databaseCleaner.truncate();
 		
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	@After
@@ -68,7 +68,7 @@ public class WalkingSkeletonSteps {
 
 	@Then("^I should see \"([^\"]*)\" and \"([^\"]*)\" listed on the page.$")
 	public void I_should_see_and_listed_on_the_page(String item1, String item2) throws Throwable {
-		List<WebElement> tdElements = driver.findElements(By.xpath("//td"));
+		List<WebElement> tdElements = driver.findElements(By.xpath("//td[@class='item_text']"));
 		List<String> stringElements = transform(tdElements, new Function<WebElement,String>() {
 			public String apply(WebElement webElement) {
 				return webElement.getText();
