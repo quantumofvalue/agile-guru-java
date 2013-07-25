@@ -347,4 +347,9 @@
 			</plugin>
         </plugins>
     </build>
+    <scm>
+    	<connection>scm:git:ssh://git@bitbucket.org:quantumofvalue/agile-guru-java.git</connection>
+    	<developerConnection>scm:git:ssh://git@bitbucket.org:quantumofvalue/agile-guru-java.git</developerConnection>
+    	<url>https://bitbucket.org/quantumofvalue/agile-guru-java</url>
+    </scm>
 </project>
